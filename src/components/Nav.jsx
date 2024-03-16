@@ -24,35 +24,35 @@ const Nav = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Home</a>
+              <a className="text-base">Home</a>
             </li>
             <li>
-              <a>Recipes</a>
+              <a className="text-base">Recipes</a>
             </li>
             <li>
-              <a>About</a>
+              <a className="text-base">About</a>
             </li>
             <li>
-              <a>Search</a>
+              <a className="text-base">Search</a>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Chefs Table</a>
+        <a className="btn btn-ghost text-3xl font-bold">Chefs Table</a>
       </div>
 
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Home</a>
+            <a className="text-base">Home</a>
           </li>
           <li>
-            <a>Recipes</a>
+            <a className="text-base">Recipes</a>
           </li>
           <li>
-            <a>About</a>
+            <a className="text-base">About</a>
           </li>
           <li>
-            <a>Search</a>
+            <a className="text-base">Search</a>
           </li>
         </ul>
       </div>
@@ -85,11 +85,8 @@ const Nav = () => {
             role="button"
             className="btn btn-ghost btn-circle avatar"
           >
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
+            <div className="w-10 rounded-full bg-green-500">
+              <img alt="Tailwind CSS Navbar component" src="/profile.svg" />
             </div>
           </div>
           <ul
