@@ -1,11 +1,11 @@
+import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Cart from "./components/Cart/Cart";
 import Hero from "./components/Hero/Hero";
 import Nav from "./components/Nav/Nav";
 import Recipes from "./components/Recipes/Recipes";
 import SecondHeader from "./components/SecoundHeader/SecondHeader";
-import { useEffect, useState } from "react";
-import "react-toastify/dist/ReactToastify.css";
 
 function App() {
 
@@ -18,7 +18,9 @@ function App() {
     .catch(err => console.error(err))
   },[])
 
-  // const handleItems = () => {};
+  const handleItems = (item) => {
+    console.log(item);
+  };
 
   return (
     <>
@@ -29,7 +31,11 @@ function App() {
         <div className="lg:w-2/3 w-full grid lg:grid-cols-2 grid-rows-1 gap-x-5 gap-y-5">          
           {
             items.map((items, idx) => (
-              <Recipes key={idx}/>
+              <Recipes 
+              key = {idx}
+              items = {items}
+              handleItems = {handleItems}
+              />
             ))
           }
           
