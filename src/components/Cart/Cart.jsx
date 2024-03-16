@@ -1,19 +1,54 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = ({ item }) => {
-//   console.log("from cart", item);
+  console.log("from cart", item);
+
+  // const {
+  //   recipe_name,
+  //   preparing_time,
+  //   calories,
+  // } = item;
 
   //   item.map((item) => (console.log(item.recipe_name)))
 
   const [preparing, setPreparing] = useState([]);
+  // const [cooking, setCooking] = useState([]);
+
+  // const alreadyListed = item.find(() => recipe_name == preparing.recipe_name);
+
+  // if (alreadyListed) {
+  //   toast.warning('Already Preparing!');
+  // }
+
 
   const handlePreparing = (i) => {
 
-    // cost isExists = item.find
-    const newPreparing = [...preparing, i];
-    setPreparing(newPreparing);
+    const isExists = preparing.find(preparing => preparing.recipe_name == i.recipe_name);
+
+    // alert(i.recipe_name);
+
+    if (!isExists) {
+      const newPreparing = [...preparing, i];
+      setPreparing(newPreparing);
+      toast.success('Preparing!');
+
+    }
+    else {
+      return toast.warning('Already Cooking!');
+    }
   };
+
+  // const handelRemove = (name) => {
+  //   console.log('removePreparing', name.recipe_name);
+
+  //   const freshCart = preparing.filter(food => food.recipe_name == name);
+  //   console.log('cartRmv', freshCart);
+  //   setPreparing(freshCart);
+
+  // }
 
   return (
     <div className="bg-gray-200 shadow-xl p-8 rounded-2xl">
@@ -46,7 +81,7 @@ const Cart = ({ item }) => {
                 </td>
                 <td>
                   <button
-                    onClick={() => handlePreparing(i)}
+                    onClick={() => { handlePreparing(i) }}
                     className="btn btn-accent rounded-3xl"
                   >
                     Preparing
@@ -85,7 +120,8 @@ const Cart = ({ item }) => {
                   {p.calories} <small>calories</small>
                 </td>
               </tr>
-            ))}
+            ))
+            }
           </tbody>
 
           <tfoot className="">

@@ -39,7 +39,7 @@ function App() {
         </div>
         <div className="lg:w-2/5 w-full">
          
-          <Cart item={showCartItem}/>
+          <Cart item={showCartItem} />
         </div>
       </div>
 
