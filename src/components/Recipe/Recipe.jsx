@@ -2,7 +2,7 @@ import { AiOutlineFire } from "react-icons/ai";
 import { LuClock2 } from "react-icons/lu";
 import PropTypes from 'prop-types';
 
-const Recipes = ({ items, handleItems }) => {
+const Recipes = ({ item, handleItems }) => {
   const {
     recipe_image,
     recipe_name,
@@ -10,7 +10,7 @@ const Recipes = ({ items, handleItems }) => {
     ingredients,
     preparing_time,
     calories,
-  } = items;
+  } = item;
 
   return (
     <div className="container mx-auto">
@@ -54,7 +54,7 @@ const Recipes = ({ items, handleItems }) => {
           <div className="card-actions w-full">
             <button
               className="btn bg-accent border-none text-black hover:text-white btn-outline rounded-3xl"
-              onClick={() => handleItems(items)}
+              onClick={() => handleItems(item)}
             >
               Want to Cook
             </button>
@@ -67,7 +67,7 @@ const Recipes = ({ items, handleItems }) => {
 
 
 Recipes.propTypes = {
-  items: PropTypes.object,
+  item: PropTypes.object,
   handleItems: PropTypes.func
 }
 
