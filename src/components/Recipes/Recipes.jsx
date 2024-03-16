@@ -1,5 +1,4 @@
 
-import "react-toastify/dist/ReactToastify.css";
 
 const Recipes = () => {
   return (
