@@ -1,6 +1,6 @@
+import PropTypes from "prop-types";
 import { AiOutlineFire } from "react-icons/ai";
 import { LuClock2 } from "react-icons/lu";
-import PropTypes from 'prop-types';
 
 const Recipes = ({ item, handleItems }) => {
   const {
@@ -23,7 +23,6 @@ const Recipes = ({ item, handleItems }) => {
           />
         </figure>
         <div className="card-body items-center text-center">
-
           <h2 className="card-title">{recipe_name}</h2>
           <p>{short_description}</p>
 
@@ -53,7 +52,7 @@ const Recipes = ({ item, handleItems }) => {
 
           <div className="card-actions w-full">
             <button
-              className="btn bg-accent border-none text-black hover:text-white btn-outline rounded-3xl"
+              className="btn btn-accent border-none text-black   rounded-3xl"
               onClick={() => handleItems(item)}
             >
               Want to Cook
@@ -65,10 +64,9 @@ const Recipes = ({ item, handleItems }) => {
   );
 };
 
-
 Recipes.propTypes = {
   item: PropTypes.object,
-  handleItems: PropTypes.func
-}
+  handleItems: PropTypes.func,
+};
 
 export default Recipes;
