@@ -1,0 +1,57 @@
+[
+    {
+      "recipe_image": "https://spiceeats.com/wp-content/uploads/2020/02/Mild-Chicken-Curry.jpg",
+      "recipe_id": 1,
+      "recipe_name": "Chicken Curry",
+      "short_description": "A delicious and flavorful chicken curry.",
+      "ingredients": ["550 g chicken", "120 ml soy sauce", "200 g basil leaf", "400 g mushroom"],
+      "preparing_time": 30,
+      "calories": 320
+    },
+    {
+      "recipe_image": "https://oldcutkitchen.com/wp-content/uploads/2020/04/IMG_4807-1200x800.jpg",
+      "recipe_id": 2,
+      "recipe_name": "Spaghetti Carbonara",
+      "short_description": "Classic Italian pasta dish with creamy sauce and bacon.",
+      "ingredients": ["400 g spaghetti", "200 g bacon", "4 eggs", "100 g grated Parmesan cheese"],
+      "preparing_time": 25,
+      "calories": 480
+    },
+    {
+      "recipe_image": "https://static01.nyt.com/images/2017/11/29/dining/29VeganRex2/29VeganRex2-superJumbo-v3.jpg",
+      "recipe_id": 3,
+      "recipe_name": "Vegetable Stir Fry",
+      "short_description": "Colorful and healthy stir-fried vegetables.",
+      "ingredients": ["300 g mixed vegetables (bell peppers, broccoli, carrots)", "150 g tofu", "50 ml soy sauce", "2 cloves garlic, minced"],
+      "preparing_time": 20,
+      "calories": 180
+    },
+    {
+      "recipe_image": "https://www.thespruceeats.com/thmb/iers0hj3kGnC5yXBJ63CEDRnq-8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mayonnaise-grilled-salmon-recipe-912735-step-06-660836cec6204c97ae600209a8963a79.jpg",
+      "recipe_id": 4,
+      "recipe_name": "Grilled Salmon",
+      "short_description": "Tender and juicy grilled salmon fillets.",
+      "ingredients": ["4 salmon fillets", "50 ml olive oil", "2 lemons, sliced", "Salt and pepper to taste"],
+      "preparing_time": 15,
+      "calories": 300
+    },
+    {
+      "recipe_image": "https://www.thespruceeats.com/thmb/RWlJDC93TPg8Q3AMG31O31ZN6h0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fresh-fruit-salad-3056969-hero-01-46ec46a61afa49bc80b432c055388648.jpg",
+      "recipe_id": 5,
+      "recipe_name": "Fresh Fruit Salad",
+      "short_description": "Refreshing and colorful mixed fruit salad.",
+      "ingredients": ["2 apples", "2 bananas", "1 cup strawberries", "1 cup grapes"],
+      "preparing_time": 10,
+      "calories": 150
+    },
+    {
+      "recipe_image": "https://sweetcayenne.com/wp-content/uploads/2016/04/wild-blueberry-buttermilk-pancakes-3.jpg",
+      "recipe_id": 6,
+      "recipe_name": "Blueberry Pancakes",
+      "short_description": "Fluffy pancakes bursting with juicy blueberries.",
+      "ingredients": ["1 cup all-purpose flour", "1 cup milk", "1 egg", "1 cup fresh blueberries"],
+      "preparing_time": 20,
+      "calories": 250
+    }
+  ]
+  
