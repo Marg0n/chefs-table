@@ -1,14 +1,13 @@
-
-import './App.css'
-import Nav from './components/Nav'
+import Hero from "./components/Hero/Hero";
+import Nav from "./components/Nav/Nav";
 
 function App() {
-
   return (
     <>
-      <Nav/>
+      <Nav />
+      <Hero />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

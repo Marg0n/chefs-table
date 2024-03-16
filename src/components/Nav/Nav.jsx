@@ -85,7 +85,7 @@ const Nav = () => {
             role="button"
             className="btn btn-ghost btn-circle avatar"
           >
-            <div className="w-10 rounded-full bg-green-500">
+            <div className="w-10 rounded-full bg-accent">
               <img alt="Tailwind CSS Navbar component" src="/profile.svg" />
             </div>
           </div>
