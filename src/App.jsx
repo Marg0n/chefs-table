@@ -11,6 +11,8 @@ function App() {
   const [items, setItems] = useState([]);
 
   const [showCartItem, setShowCartItem] = useState([]);
+  const [preparing, setPreparing] = useState([]);
+  const [cooking, setCooking] = useState([]);
 
   useEffect(() => {
     fetch("/items.json")
@@ -22,7 +24,9 @@ function App() {
   const handleItems = (item) => {
     // console.log('from app handle1',item);
 
-    const isExists = showCartItem.find((i) => i.recipe_name == item.recipe_name);
+    const isExists = showCartItem.find(
+      (i) => i.recipe_name == item.recipe_name
+    );
     // console.log('is exists app',isExists);
     if (isExists) {
       toast.warning(`${item.recipe_name} Already Preparing!`);
@@ -32,6 +36,36 @@ function App() {
     }
 
     // console.log('from app handle2',newCartItem);
+  };
+
+  const handlePreparing = (i) => {
+    const isExists = preparing.find(
+      (preparing) => preparing.recipe_name == i.recipe_name
+    );
+
+    // alert(i.recipe_name);
+
+    if (!isExists) {
+      const newPreparing = [...preparing, i];
+      const newCooking = [...cooking, i];
+      setPreparing(newPreparing);
+      setCooking(newCooking);
+      // toast.success("Preparing!");
+
+      const removeItem = showCartItem.filter(
+        (r) => r.recipe_name !== i.recipe_name
+        // (r) => console.log(i.recipe_name)
+      );
+      console.log("remove b4", removeItem);
+      setShowCartItem(removeItem);
+      // toast.success("deleted!");
+      toast.success("Preparing! Have a good meal!");
+      console.log("remove", removeItem);
+
+    } 
+    else {
+      return toast.warning("Already Cooking!");
+    }
   };
 
   return (
@@ -46,11 +80,15 @@ function App() {
           ))}
         </div>
         <div className="lg:w-2/5 w-full">
-          <Cart item={showCartItem} />
+          <Cart
+            item={showCartItem}
+            handlePreparing={handlePreparing}
+            cooking={cooking}
+          />
         </div>
       </div>
 
-      <ToastContainer />
+      <ToastContainer stacked />
     </>
   );
 }
