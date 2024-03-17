@@ -50,7 +50,7 @@ const Cart = ({ item, handlePreparing, cooking }) => {
 
       <div className="mt-12">
         <h3 className="text-xl font-semibold text-center">
-          Currently cooking: 02
+          Currently cooking: {cooking.length}
         </h3>
         <div className="divider"></div>
         <table className="table-fixed w-full text-base  text-left border-spacing-y-4 border-separate">

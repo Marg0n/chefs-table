@@ -51,7 +51,7 @@ const Recipes = ({ item, handleItems }) => {
             </small>
           </div>
 
-          <div className="card-actions w-full">
+          <div className="card-actions w-full mt-4">
             <button
               className="btn btn-accent border-none text-black   rounded-3xl"
               onClick={() => handleItems(item)}
