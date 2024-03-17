@@ -27,12 +27,19 @@ function App() {
     const isExists = showCartItem.find(
       (i) => i.recipe_name == item.recipe_name
     );
+    const isCooking = cooking.find(
+      (i) => i.recipe_name == item.recipe_name
+    );
     // console.log('is exists app',isExists);
     if (isExists) {
-      toast.warning(`${item.recipe_name} Already Preparing!`);
+      toast.warning(`${item.recipe_name} is already Preparing!`);
+    } 
+    else if (isCooking) {
+      toast(`🍳 ${item.recipe_name} is Cooking right now!`);
     } else {
       const newCartItem = [...showCartItem, item];
       setShowCartItem(newCartItem);
+      toast.info(`${item.recipe_name} is Added to Wishlist! 😁`);
     }
 
     // console.log('from app handle2',newCartItem);
@@ -59,7 +66,7 @@ function App() {
       console.log("remove b4", removeItem);
       setShowCartItem(removeItem);
       // toast.success("deleted!");
-      toast.success("Preparing! Have a good meal!");
+      toast.success("Preparing! Wait a bit for the meal! 🍴");
       console.log("remove", removeItem);
 
     } 
