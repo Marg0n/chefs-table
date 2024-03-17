@@ -15,7 +15,7 @@ const Recipes = ({ item, handleItems }) => {
   return (
     <div className="container mx-auto">
       <div className="card bg-gray-200 shadow-xl min-h-[80vh]">
-        <figure className="px-10 pt-10">
+        <figure className="px-4 pt-8">
           <img
             src={recipe_image}
             alt="Shoes"
@@ -23,11 +23,12 @@ const Recipes = ({ item, handleItems }) => {
           />
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="card-title">{recipe_name}</h2>
-          <p>{short_description}</p>
-
+          <div className="h-16">
+            <h2 className="text-xl font-semibold text-center">{recipe_name}</h2>
+            <p className="text-base">{short_description}</p>
+          </div>
           <div className="divider"></div>
-          <div className="w-full text-start ">
+          <div className="w-full text-start h-36">
             <h3 className="text-lg font-semibold mb-2">
               Ingredients: {ingredients.length}
             </h3>
@@ -39,7 +40,7 @@ const Recipes = ({ item, handleItems }) => {
           </div>
           <div className="divider"></div>
 
-          <div className="w-full flex justify-between mb-4">
+          <div className="w-full flex justify-between">
             <small className="flex gap-2 items-center">
               <LuClock2 />
               {preparing_time} minutes
