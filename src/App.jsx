@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Cart from "./components/Cart/Cart";
 import Hero from "./components/Hero/Hero";
@@ -20,10 +20,18 @@ function App() {
   }, []);
 
   const handleItems = (item) => {
-    // console.log(item);
-    const newCartItem = [...showCartItem, item];
-    setShowCartItem(newCartItem);
-    console.log(newCartItem);
+    // console.log('from app handle1',item);
+
+    const isExists = showCartItem.find((i) => i.recipe_name == item.recipe_name);
+    // console.log('is exists app',isExists);
+    if (isExists) {
+      toast.warning(`${item.recipe_name} Already Preparing!`);
+    } else {
+      const newCartItem = [...showCartItem, item];
+      setShowCartItem(newCartItem);
+    }
+
+    // console.log('from app handle2',newCartItem);
   };
 
   return (
@@ -38,7 +46,6 @@ function App() {
           ))}
         </div>
         <div className="lg:w-2/5 w-full">
-         
           <Cart item={showCartItem} />
         </div>
       </div>
